@@ -1,0 +1,146 @@
+/* prompt-regular - latin_thai */
+@font-face {
+    font-family: Prompt;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/prompt-v4-latin_thai-regular.eot'); /* IE9 Compat Modes */
+    src: local('Prompt'), local('Prompt-Regular'),
+            url('../fonts/prompt-v4-latin_thai-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('../fonts/prompt-v4-latin_thai-regular.woff2') format('woff2'), /* Super Modern Browsers */
+            url('../fonts/prompt-v4-latin_thai-regular.woff') format('woff'), /* Modern Browsers */
+            url('../fonts/prompt-v4-latin_thai-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('../fonts/prompt-v4-latin_thai-regular.svg#Prompt') format('svg'); /* Legacy iOS */
+}
+html body {
+    font-family: Prompt;
+    height:100vh;
+    padding:0;
+    margin:0;
+}
+input,button,label,span {
+    font-family: Prompt;
+    font-weight: 400;
+}
+.pb-1 {
+    padding-bottom : 1em;
+}
+.d-flex{
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-row {
+    flex-direction: row; 
+}
+.align-items-center{
+    align-items: center;
+}
+.justify-content {
+    justify-content: center;
+}
+.text-center{
+    text-align: center;
+}
+.lk-screen{
+    max-width: 1280px;
+    max-height: 1280px;
+}
+.lk-center{
+    margin: 0 auto;
+}
+.lk-pt {
+    padding-top: calc(30% - 100px);
+}
+.lk-width {
+    width: calc(60% - 100px);
+}
+.lk-italic{
+    font-style: italic;
+}
+.fill {
+    fill : #fff !important;
+}
+.fill-#000 {
+    fill : #000 !important;
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: initial;
+}
+.input {
+    display: block;
+    width: 90%;
+    height: calc(1.25em + .25rem + 1px);
+    padding: 0.25rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input:focus {
+    outline: none !important;
+    border:1px solid whitesmoke;
+    box-shadow: 0 0 10px #719ECE;
+}
+.console {
+    height: -webkit-fill-available;
+    background-color: black;
+}
+.h-100 {
+    height: 100vh;
+}
+.el-menu-item.is-active {
+    color: #000 !important;
+    background-color: #fff;
+}
+.el-menu {
+    border-right: 0;
+    background-color: #1ac6ff;
+}
+.el-success {
+    background-color: lightgreen;
+}
+.el-exit {
+    background-color: lightpink;
+}
+.tac a {
+    text-decoration: none;
+    color:#000;
+}
+.p2 {
+    padding: 2em; 
+}
+.sub-content {
+    color: #fff;
+}
+// NOTE login page
+.log-in {    
+    input {
+        border: 2px solid #1ac6ff;
+        background-color: #000;
+        color: #fff;
+    }
+    ::placeholder{
+        color: #fff;
+        font-size: .9rem !important;
+        font-weight: 200;
+    }
+    .simple-keyboard {
+        max-width: 850px;
+        position: absolute;
+        z-index: 999;
+        background-color: whitesmoke !important;
+    }
+    .label {
+        color: rgb(255, 255, 255);
+        font-size: 1.5rem;
+    }
+}

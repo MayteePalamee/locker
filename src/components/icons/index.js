@@ -1,0 +1,11 @@
+/* eslint-disable */
+require('./book')
+require('./clipboard2')
+require('./cogs')
+require('./document')
+require('./exit')
+require('./folder-plus')
+require('./microchip')
+require('./monitor')
+require('./now_widgets')
+require('./wallet1')

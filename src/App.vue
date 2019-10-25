@@ -1,32 +1,25 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="app" class="lk-screen">
+    <component :is="layout"></component>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import view from './views/desktop/view.vue'
+import staff from './views/console/staff.vue'
 
-#nav {
-  padding: 30px;
-}
+const defaults = 'desktop'
+const backend = 'console'
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+export default {
+  computed: {
+    layout () {
+      return (this.$route.meta.layout || defaults || backend) + '-layout'
+    }
+  },
+  components: {
+    'desktop-layout': view,
+    'console-layout': staff
+  }
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>

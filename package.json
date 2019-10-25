@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "electron-webpack dev",
+    "build": "electron-webpack && electron-builder",
+    "icons": "vsvg -s src/assets/icons -t src/components/icons",
+    "prebuild": "npm run icons"
   },
   "dependencies": {
     "core-js": "^3.3.2",
+    "element-ui": "^2.12.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "babel-loader": "^8.0.6",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3",
@@ -21,9 +26,20 @@
     "@vue/cli-service": "^4.0.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.3",
+    "electron": "^7.0.0",
+    "electron-builder": "^21.2.0",
+    "electron-reload": "^1.5.0",
+    "electron-webpack": "^2.7.4",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "simple-keyboard": "^2.26.15",
+    "vue-svg-loader": "^0.12.0",
+    "vue-svgicon": "^3.2.6",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-node-externals": "^1.7.2"
   },
   "eslintConfig": {
     "root": true,
